@@ -1,0 +1,118 @@
+/* ==========================================================================
+   StoreRate - Topbar Styles
+   ========================================================================== */
+
+.app-topbar {
+  height: var(--topbar-height, 64px);
+  min-height: var(--topbar-height, 64px);
+  background-color: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(8px);
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-muted);
+}
+
+.topbar-toggle-btn:hover {
+  background: #e2e8f0;
+  color: var(--color-text-main);
+}
+
+.topbar-page-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbar-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.topbar-user-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.topbar-user-email {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+}
+
+.topbar-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.topbar-action-btn:hover {
+  background: var(--color-bg-muted);
+  color: var(--color-primary);
+}
+
+.topbar-action-btn.logout-btn:hover {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+@media (max-width: 1024px) {
+  .app-topbar {
+    padding: 0 20px;
+  }
+
+  .topbar-toggle-btn {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar-user-info {
+    display: none;
+  }
+}
+
+/* Brand shows in the navbar only when the sidebar is collapsed */
+.topbar-brand { display: none; }
+.topbar-brand .sr-brand-text { font-size: 1.05rem; }
+@media (max-width: 1024px) {
+  .topbar-brand { display: inline-flex; }
+}
+@media (max-width: 640px) {
+  .topbar-brand .sr-brand-text { display: none; }
+}

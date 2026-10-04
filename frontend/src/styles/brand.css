@@ -1,0 +1,8 @@
+/* StoreRate brand lockup */
+.sr-brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+.sr-brand-text { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+.sr-brand--light .sr-brand-text { color: var(--color-text-main); }
+.sr-brand--light .sr-brand-text span { color: var(--color-primary); }
+.sr-brand--dark .sr-brand-text { color: #fff; }
+.sr-brand--dark .sr-brand-text span { color: #a5b4fc; }
+.sr-brand:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: 6px; }

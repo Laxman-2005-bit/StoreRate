@@ -1,0 +1,138 @@
+/* ==========================================================================
+   StoreRate - App Layout Styles (No Overlapping Architecture)
+   ========================================================================== */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-bg-body);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Main Area starts strictly AFTER the sidebar */
+.main-area {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--color-bg-body);
+  position: relative;
+}
+
+/* Content Container with consistent whitespace */
+.page-content {
+  flex: 1;
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Page Header Block */
+.page-header-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.page-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.page-main-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.page-main-subtitle {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Grid & Responsive Containers */
+.cards-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.cards-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.cards-grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* Backdrop for Mobile Drawer */
+.sidebar-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 998;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .page-content {
+    padding: 20px 20px;
+  }
+
+  .cards-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar-backdrop.active {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .cards-grid-3,
+  .cards-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .page-content {
+    padding: 16px 16px;
+  }
+}

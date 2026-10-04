@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+  <!-- Store building body -->
+  <rect x="8" y="18" width="28" height="18" rx="3" fill="#4F46E5"/>
+  <!-- Roof / awning -->
+  <path d="M6 19 L22 9 L38 19" stroke="#818CF8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Doorway -->
+  <rect x="18" y="27" width="8" height="9" rx="1.5" fill="white" fill-opacity="0.25"/>
+  <!-- Star badge -->
+  <circle cx="33" cy="13" r="7.5" fill="#F59E0B"/>
+  <path d="M33 9.2l.98 2.52 2.7.22-2.06 1.76.62 2.65L33 14.93l-2.24 1.42.62-2.65-2.06-1.76 2.7-.22L33 9.2z" fill="white"/>
+</svg>
